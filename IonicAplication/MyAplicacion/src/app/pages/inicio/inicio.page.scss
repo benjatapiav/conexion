@@ -1,0 +1,49 @@
+.background{
+    --background: url('../../../assets/imagenes/fondo_morado.png') 0 0/100% 100% no-repeat;
+}
+
+
+.idayvuelta{
+    --background:white;
+    width: 120px;
+    height: 30px;
+    --border-radius:10px;
+    
+}
+
+
+.contenedor-tipo-cantidad{
+    display:flex;
+}
+.contenedor-idavuelta{
+    margin:5px;
+    
+}
+ion-input{
+    --background:white;
+}
+
+.contenedor-cantidadPasajeros{
+    margin: 10px;
+    padding:30px;
+    gap: 20px;
+
+    
+}
+.contenedor-cantidadPasajeros-adultos, .contenedor-cantidadPasajeros-ninos{
+    display:flex;
+    gap: 30px;
+}
+
+.boton-pasajeros{
+    --background:white;
+    --color:black;
+}
+.modal-button{
+    --border-radius: 100px;
+    --background: #d300b0;
+    width: 50px;
+    height: 10px;
+}
+
+

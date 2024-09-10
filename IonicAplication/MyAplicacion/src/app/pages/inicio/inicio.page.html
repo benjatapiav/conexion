@@ -1,0 +1,60 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar>
+    <ion-title>Sesion de {{usuarioCorreo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+
+  <ion-text>
+    <ion-item>
+      <p>Bienvenido: {{usuarioCorreo}}</p>
+    </ion-item>
+  </ion-text>
+
+  <div class="contenedor-pasajes">
+    
+    <div class="contenedor-tipo-cantidad">
+
+      <ion-select placeholder="ida y vuelta" class="idayvuelta" type="button">
+        <ion-select-option value="soloIda">Solo ida</ion-select-option>
+        <ion-select-option value="idayVuelta">Ida y Vuelta</ion-select-option>
+      </ion-select>
+      <!-- modal para pasajeros-->
+      <ion-button class="boton-pasajeros" expand="block" (click)="setOpen(true)">Pasajeros</ion-button>
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template class="contenedor-sumaPasajeros">
+        <div class="contenedor-cantidadPasajeros">
+          <div class="contenedor-cantidadPasajeros-adultos">
+          <h3>Adultos</h3>
+          <ion-button class="modal-button" (click)="decrement()">-</ion-button>
+          <p>{{contador}}</p>
+          <ion-button class="modal-button" (click)="increment()">+</ion-button>
+          </div>
+          <br>
+          <div class="contenedor-cantidadPasajeros-ninos">
+          <h3>Niños</h3>
+          <ion-button class="modal-button" (click)="decrement2()">-</ion-button>
+          <p>{{contador2}}</p>
+          <ion-button class="modal-button" (click)="increment2()">+</ion-button>
+          </div>
+        </div>
+      </ng-template>
+      </ion-modal>
+    </div>
+
+    <!-- Contenedor de input desde y hacia -->
+    <div class="contenedor-idavuelta">
+      <ion-input label-placment="floating" fill="outline" placeholder="Desde"></ion-input><br>
+      <ion-input label-placment="floating" fill="outline" placeholder="Hacia"></ion-input>
+    </div>
+
+  </div>
+  
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar>
+    <ion-title>footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro de Usuario</ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <div id="loginimage">
+    <img src="../../../assets/imagenes/Logo_Login-sinfondo.png" alt="loginimage" href="#">
+  </div>
+  <div class="contenedorLogin">
+    
+    <ion-input label="Usuario/Correo" label-placement="floating" fill="outline" placeholder="Usuario" [(ngModel)]="usuarioCorreo"></ion-input>
+    <br />
+    <ion-input label="Contraseña" label-placement="floating" fill="outline" placeholder="Password" type="Password" [(ngModel)]="usuarioContrasenia"></ion-input><br>
+    <div class="ingresar-button">
+      <ion-button class="boton" (click)="validarCredenciales()">ingresar</ion-button>
+    </div>
+  </div>
+
+  <ion-text class="ion-text-center" [routerLink]="['/recuperar']">
+    <p>¿Olvidaste tu contraseña?</p>
+  </ion-text>
+  
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
